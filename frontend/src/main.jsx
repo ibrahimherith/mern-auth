@@ -18,6 +18,8 @@ import Home from "./pages/Home.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
+import Product from "./pages/Product.jsx";
+import Shop from "./pages/Shop.jsx";
 
 //routes
 const router = createBrowserRouter(
@@ -26,9 +28,12 @@ const router = createBrowserRouter(
       <Route index={true} path="/" element={<Home />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
+      <Route path="/shop" element={<Shop />} />
+
       {/* Private Routes */}
       <Route path="" element={<PrivateRoute />}>
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/product" element={<Product />} />
       </Route>
     </Route>
   )
